@@ -3,9 +3,9 @@ var path = require('path');
 var app = express();
 var Mongoclient = require('mongodb').MongoClient;
 
-var appUrl = "localhost:3000/";
+var appUrl = "https://urlshortner-nahil.glitch.me/";
 
-Mongoclient.connect("mongodb://localhost:27017/urlshort",function(err,db){
+Mongoclient.connect("mongodb://nahilahmed:nahil757@ds251988.mlab.com:51988/urlshort",function(err,db){
 console.log("created database");
 var dbo = db.db("urlshort");
 dbo.createCollection("shorturl",function(err,res){
